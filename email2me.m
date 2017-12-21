@@ -20,7 +20,7 @@ props.setProperty('mail.smtp.auth','true');
 subject = [codeFileName,'程序执行状态报告'];  % 发送的邮件主题
 
 % 判断附件大小
-fid = fopen(filename);
+fid = fopen(attachFileName);
 fseek(fid,0,'eof');
 fsize = ftell(fid)/2^20;
 
