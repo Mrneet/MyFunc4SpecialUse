@@ -23,14 +23,15 @@ subject = [codeFileName,'程序执行状态报告'];  % 发送的邮件主题
 fid = fopen(attachFileName);
 fseek(fid,0,'eof');
 fsize = ftell(fid)/2^20;
+[~,hostname] = system('hostname');
 
 if fsize < 50
-    content = 'Hello, 您的程序已经运行结束，运行结果可见附件。';  % 发送的邮件内容
+    content = ['Hello, 您的程序已经运行结束，运行结果可见附件。本机：',hostname];  % 发送的邮件内容
     sendmail(targetMailAddress,subject,content,{attachFileName}); % 设置需要接收的邮箱及主题、内容、附件等
     disp('邮件（包含附件）发送成功。');
 else
     disp('附件超过邮箱限制。')
-    content = ['Hello, 您的程序已经运行结束。附件',attachFileName,'大小为',fsize,'M，超过邮箱限制，未发送。'];  % 发送的邮件内容
+    content = ['Hello, 您的程序已经运行结束。附件',attachFileName,'大小为',num2str(fsize),'M，超过邮箱限制，未发送。本机：',hostname];  % 发送的邮件内容
     sendmail('423548983@qq.com',subject,content); % 设置需要接收的邮箱及主题、内容、附件等
     disp('邮件（不含含附件）发送成功。');
 end
