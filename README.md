@@ -11,3 +11,7 @@ This project contains some useful MATLAB code edit by myself. They are implied i
 # searchLimDet.m
 ## 2018.03.28
 1. Added this function to content, which is used to determine a search limits from those parameters.
+
+# cellsum.m
+## 2018.04.26
+1. Added this function to content, which is sum of cell array, each element in the cell array should be the same dimention and same data type.
