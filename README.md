@@ -1,6 +1,13 @@
 # MyFunc4SpecialUse
 This project contains some useful MATLAB code edit by myself. They are implied in my own script.
 
+# loadSysInfo.m
+## 2022.3.26
+1. Loading hostname, CPU and MATLAB version.
+
+# main_genPlotConfig
+## 2021.10.5
+1. Generating figure configurations, including line style, symbol style and colors.
 
 # email2me.m
 ## 2018.01.25
