@@ -1,11 +1,15 @@
 # MyFunc4SpecialUse
 This project contains some useful MATLAB code edit by myself. They are implied in my own script.
 
+# copydependFiles.m
+## 2022.3.28
+1. Copy all dependent files to the target folder. If the target folder does not exist, a new folder will be created.
+
 # loadSysInfo.m
 ## 2022.3.26
 1. Loading hostname, CPU and MATLAB version.
 
-# main_genPlotConfig
+# main_genPlotConfig.m
 ## 2021.10.5
 1. Generating figure configurations, including line style, symbol style and colors.
 
